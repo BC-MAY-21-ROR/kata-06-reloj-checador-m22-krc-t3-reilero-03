@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'rubycritic'
+gem 'rspec'
+gem 'sandi_meter'
+gem 'rake'
+gem 'rexml'
+gem 'rubycritic-small-badge', :require => false
+

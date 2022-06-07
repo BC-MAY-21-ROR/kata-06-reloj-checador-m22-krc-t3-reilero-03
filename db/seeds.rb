@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Branch.create(name: "Reinosa", address: "dir 1-2")
+Branch.create(name: "Matamoros", address: "dir 1-2")
+Branch.create(name: "San Fernado", address: "dir 1-2")
+Branch.create(name: "Victoria", address: "dir 1-2")
+Branch.create(name: "Valledupar", address: "Calle 6")

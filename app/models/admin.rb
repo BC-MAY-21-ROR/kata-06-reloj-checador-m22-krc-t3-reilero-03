@@ -1,4 +1,6 @@
 class Admin < ApplicationRecord
-    validates :name, :password, presence: true
+  # adds virtual attributes for authentication
+  has_secure_password
+  validates :name, presence: true, uniqueness: true
 
 end

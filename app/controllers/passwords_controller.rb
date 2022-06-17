@@ -2,6 +2,7 @@ class PasswordsController < ApplicationController
   # allows only logged in users
   before_action :require_user_logged_in!
   def edit; end
+
   def update
     # update user password
     if Current.admin.update(password_params)
@@ -10,8 +11,10 @@ class PasswordsController < ApplicationController
       render :edit
     end
   end
+
   private
+
   def password_params
-    params.require(:admin).permit(:password :password_digest)
+    params.require(:admin).permit(:password, :password_digest)
   end
 end

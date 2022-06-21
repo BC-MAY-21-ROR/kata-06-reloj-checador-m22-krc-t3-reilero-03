@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'welcome#index'
-  get 'sign_up', to: 'registrations#new'
-  post 'sign_up', to: 'registrations#create'
+
+  get 'sign_up', to: 'attendances#new'
+  post 'sign_up', to: 'attendances#create'
+
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create', as: 'log_in'
   delete 'logout', to: 'sessions#destroy'
@@ -12,8 +14,13 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+
+  # root "log#index"
+  # get 'sign_up', to: 'log#new'
+  # post 'sign_up', to: 'log#create'
   
   resources :branches
   resources :employees
+  resources :attendances
   
 end

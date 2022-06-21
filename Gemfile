@@ -43,4 +43,4 @@ end
 
 gem 'tzinfo-data'
 
-gem "bootstrap", "~> 5.1"
+gem 'bootstrap', '~> 5.1'

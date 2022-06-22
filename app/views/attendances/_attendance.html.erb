@@ -5,7 +5,12 @@
   </p>
   <p>
     <strong>Check out:</strong>
-    <%= attendance.check_out %>
+    <%= if attendance.check_out.nil?
+          attendance.check_out
+        else
+          attendance.check_out.localtime
+        end
+     %>
   </p>
   <p>
     <strong>Employee:</strong>

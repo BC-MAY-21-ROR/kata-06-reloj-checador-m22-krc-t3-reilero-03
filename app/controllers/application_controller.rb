@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
-  before_action :set_current_user
+  before_action :set_current_admin
 
-  def set_current_user
+  def set_current_admin
     # finds user with session data and stores it if present
     Current.admin = Admin.find_by(id: session[:admin_id]) if session[:admin_id]
   end
 
-  def require_user_logged_in!
+  def require_admin_logged_in!
     # allows only logged in user
     redirect_to sign_in_path, alert: 'You must be signed in' if Current.admin.nil?
   end
